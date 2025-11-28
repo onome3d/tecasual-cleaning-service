@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Home, Instagram, Facebook, Twitter } from "lucide-react";
+import Image from "next/image";
+import { Instagram, Facebook, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -27,8 +28,13 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Home className="h-7 w-7 text-primary" />
-              <span className="font-serif text-2xl font-bold">TECASUAL</span>
+              <Image
+                src="/logo.png"
+                alt="TECASUAL Logo"
+                width={150}
+                height={60}
+                className="h-16 w-auto object-contain"
+              />
             </Link>
             <p className="text-white/70 text-sm leading-relaxed max-w-sm">
               Your complete home and lifestyle service provider. From cleaning

@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,13 +42,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-2">
-            <Home className={`h-7 w-7 ${showTransparent ? "text-white" : "text-primary"}`} />
-            <span className={`font-serif text-2xl font-bold ${showTransparent ? "text-white" : "text-foreground"}`}>
-              TECASUAL{" "}
-              <span className={`text-sm font-normal ${showTransparent ? "text-white/80" : "text-primary"}`}>
-                {"{cleaning service}"}
-              </span>
-            </span>
+            <Image
+              src="/logo.png"
+              alt="TECASUAL Logo"
+              width={150}
+              height={60}
+              className="md:h-16 h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -71,10 +73,14 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <Button 
-              variant="ghost" 
+            <Button
+              variant="ghost"
               size="sm"
-              className={showTransparent ? "text-white hover:bg-white/10 hover:text-white" : ""}
+              className={
+                showTransparent
+                  ? "text-white hover:bg-white/10 hover:text-white"
+                  : ""
+              }
             >
               Log in
             </Button>
@@ -86,7 +92,9 @@ export function Header() {
           </div>
 
           <button
-            className={`md:hidden p-2 ${showTransparent ? "text-white" : "text-foreground"}`}
+            className={`md:hidden p-2 ${
+              showTransparent ? "text-white" : "text-foreground"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
