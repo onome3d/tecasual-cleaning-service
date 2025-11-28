@@ -36,7 +36,7 @@ export function FAQ() {
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-muted-foreground text-lg">Got questions? We've got answers</p>
+          <p className="text-muted-foreground text-lg">Got questions? We&apos;ve got answers</p>
         </div>
 
         <div className="space-y-4">

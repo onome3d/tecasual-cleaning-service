@@ -40,7 +40,7 @@ export function WhyChooseUs() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">Why Choose Us?</h2>
           <p className="text-muted-foreground text-lg">
-            We're committed to delivering exceptional service that exceeds your expectations
+            We&apos;re committed to delivering exceptional service that exceeds your expectations
           </p>
         </div>
 

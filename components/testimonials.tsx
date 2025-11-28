@@ -5,14 +5,14 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Homeowner",
     content:
-      "Sparkle Cleaning transformed my home! The team was professional, thorough, and used eco-friendly products. I couldn't be happier with the results!",
+      "Sparkle Cleaning transformed my home! The team was professional, thorough, and used eco-friendly products. I couldn&apos;t be happier with the results!",
     rating: 5,
   },
   {
     name: "Michael Chen",
     role: "Business Owner",
     content:
-      "We've been using Sparkle Cleaning for our office for over a year. Their attention to detail and reliability has been outstanding.",
+      "We&apos;ve been using Sparkle Cleaning for our office for over a year. Their attention to detail and reliability has been outstanding.",
     rating: 5,
   },
   {
@@ -52,7 +52,7 @@ export function Testimonials() {
                   <Star key={i} className="h-5 w-5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-foreground mb-6 leading-relaxed">"{testimonial.content}"</p>
+              <p className="text-foreground mb-6 leading-relaxed">&ldquo;{testimonial.content}&rdquo;</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                   <span className="text-lg font-semibold text-primary">{testimonial.name.charAt(0)}</span>
