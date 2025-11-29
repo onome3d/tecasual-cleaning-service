@@ -14,7 +14,7 @@ export function About() {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden relative h-[400px] lg:h-[500px]">
               <Image
-                src="/images/attachments-gen-images-v0-image.png"
+                src="/images/attachments-gen-images-v0-image.jpg"
                 alt="Our cleaning team"
                 fill
                 className="object-cover"

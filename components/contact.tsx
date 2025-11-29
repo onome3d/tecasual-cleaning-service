@@ -122,7 +122,7 @@ export function Contact() {
           <div className="lg:col-span-2 space-y-6">
             <div className="rounded-2xl overflow-hidden h-48 lg:h-64 relative">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/v0_image-2-cdtofVtMrknE3PhHwku6l60NwE6Nej.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/v0_image-2-cdtofVtMrknE3PhHwku6l60NwE6Nej.jpg"
                 alt="Contact us"
                 fill
                 className="object-cover"

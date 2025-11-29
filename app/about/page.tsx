@@ -56,22 +56,22 @@ const teamMembers = [
   {
     name: "Adaeze Okafor",
     role: "Founder & CEO",
-    image: "/images/img- (46).png",
+    image: "/images/img- (46).jpg",
   },
   {
     name: "Chukwuemeka Eze",
     role: "Operations Manager",
-    image: "/images/img- (47).png",
+    image: "/images/img- (24).jpg",
   },
   {
     name: "Fatima Bello",
     role: "Head of Cleaning",
-    image: "/images/img- (48).png",
+    image: "/images/img- (48).jpg",
   },
   {
     name: "Oluwaseun Adeyemi",
     role: "Customer Relations",
-    image: "/images/img- (49).png",
+    image: "/images/img- (37).jpg",
   },
 ];
 
@@ -105,8 +105,15 @@ const milestones = [
   },
 ];
 
-
-function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+function AnimatedSection({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -154,7 +161,8 @@ function CountUp({ target, suffix = "" }: { target: string; suffix?: string }) {
                 if (ref.current) ref.current.textContent = target;
                 clearInterval(timer);
               } else {
-                if (ref.current) ref.current.textContent = Math.floor(current) + suffix;
+                if (ref.current)
+                  ref.current.textContent = Math.floor(current) + suffix;
               }
             }, 30);
           }
@@ -179,7 +187,7 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/img- (12).png"
+            src="/images/img- (12).jpg"
             alt="About Us Background"
             fill
             className="object-cover scale-105"
@@ -190,14 +198,16 @@ export default function AboutPage() {
 
         <div className="container relative z-10 mx-auto px-4">
           <div className="max-w-4xl">
-            <div 
+            <div
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full text-white/90 text-sm font-medium mb-8 border border-white/20 animate-fade-in"
               style={{ animationDelay: "0.2s", animationFillMode: "both" }}
             >
               <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-              <span className="tracking-widest uppercase text-xs">About Us</span>
+              <span className="tracking-widest uppercase text-xs">
+                About Us
+              </span>
             </div>
-            <h1 
+            <h1
               className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[1.1] tracking-tight animate-fade-in"
               style={{ animationDelay: "0.4s", animationFillMode: "both" }}
             >
@@ -206,26 +216,34 @@ export default function AboutPage() {
                 Cleaning
               </span>
             </h1>
-            <p 
+            <p
               className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl font-light tracking-wide animate-fade-in"
               style={{ animationDelay: "0.6s", animationFillMode: "both" }}
             >
               TECASUAL {"{cleaning service}"} is your complete home and
-              lifestyle management partner. We&apos;re dedicated to making your life
-              easier, one service at a time.
+              lifestyle management partner. We&apos;re dedicated to making your
+              life easier, one service at a time.
             </p>
           </div>
         </div>
 
         {/* Floating elements */}
         <div className="absolute bottom-10 right-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-pulse hidden md:block" />
-        <div className="absolute top-40 right-20 w-32 h-32 bg-accent/10 rounded-full blur-2xl animate-bounce hidden md:block" style={{ animationDuration: "3s" }} />
+        <div
+          className="absolute top-40 right-20 w-32 h-32 bg-accent/10 rounded-full blur-2xl animate-bounce hidden md:block"
+          style={{ animationDuration: "3s" }}
+        />
       </section>
 
       {/* Stats Bar */}
       <section className="py-16 bg-primary text-primary-foreground relative z-20 -mt-10 mx-4 md:mx-10 rounded-3xl shadow-2xl overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/icon-bg-pattern-01.png" alt="Pattern" fill className="object-cover mix-blend-overlay" />
+          <Image
+            src="/images/icon-bg-pattern-01.png"
+            alt="Pattern"
+            fill
+            className="object-cover mix-blend-overlay"
+          />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/20">
@@ -235,7 +253,16 @@ export default function AboutPage() {
                 className="text-center px-4 group hover:-translate-y-2 transition-all duration-500 cursor-default"
               >
                 <div className="text-4xl md:text-6xl font-bold mb-2 tracking-tight group-hover:scale-110 transition-transform duration-300">
-                  <CountUp target={stat.value} suffix={stat.value.includes("+") ? "+" : stat.value.includes("%") ? "%" : ""} />
+                  <CountUp
+                    target={stat.value}
+                    suffix={
+                      stat.value.includes("+")
+                        ? "+"
+                        : stat.value.includes("%")
+                        ? "%"
+                        : ""
+                    }
+                  />
                 </div>
                 <div className="text-xs md:text-sm font-semibold opacity-80 uppercase tracking-[0.2em]">
                   {stat.label}
@@ -246,7 +273,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* Our Story */}
       <section className="py-32">
         <div className="container mx-auto px-4 md:px-15">
@@ -254,7 +280,7 @@ export default function AboutPage() {
             <AnimatedSection className="relative">
               <div className="rounded-[2.5rem] overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 hover:shadow-primary/20">
                 <Image
-                  src="/images/img- (6).png"
+                  src="/images/img- (6).jpg"
                   alt="Our Team"
                   width={600}
                   height={400}
@@ -263,7 +289,7 @@ export default function AboutPage() {
               </div>
               <div className="absolute -bottom-12 -right-12 w-2/3 rounded-4xl overflow-hidden shadow-2xl border-8 border-background hidden md:block transform hover:scale-105 transition-transform duration-500 delay-100">
                 <Image
-                  src="/images/img- (7).png"
+                  src="/images/img- (34).jpg"
                   alt="Cleaning in action"
                   width={400}
                   height={300}
@@ -271,9 +297,13 @@ export default function AboutPage() {
                 />
               </div>
               <div className="absolute top-12 -left-12 bg-white dark:bg-card p-8 rounded-3xl shadow-2xl hidden md:block border border-border/50 hover:shadow-primary/20 transition-shadow duration-500">
-                <div className="text-5xl font-black text-primary mb-1 tracking-tight">5+</div>
+                <div className="text-5xl font-black text-primary mb-1 tracking-tight">
+                  5+
+                </div>
                 <div className="text-xs font-bold text-muted-foreground uppercase tracking-[0.15em]">
-                  Years of<br />Excellence
+                  Years of
+                  <br />
+                  Excellence
                 </div>
               </div>
             </AnimatedSection>
@@ -297,9 +327,9 @@ export default function AboutPage() {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   We understand that modern life is busy. Between work, family,
                   and personal commitments, keeping a home pristine can be a
-                  challenge. That&apos;s where we come in. We handle the chores, the
-                  cooking, the errands, and the care, so you can focus on living
-                  your best life.
+                  challenge. That&apos;s where we come in. We handle the chores,
+                  the cooking, the errands, and the care, so you can focus on
+                  living your best life.
                 </p>
               </div>
 
@@ -332,7 +362,7 @@ export default function AboutPage() {
       <section className="py-32 bg-secondary/20 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-        
+
         <div className="container mx-auto px-4 md:px-15 relative z-10">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-20">
             <div className="inline-flex items-center gap-2 bg-primary/10 px-5 py-2 rounded-full text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6">
@@ -343,7 +373,8 @@ export default function AboutPage() {
               The Principles That Guide Us
             </h2>
             <p className="text-muted-foreground text-xl leading-relaxed">
-              Everything we do is driven by our commitment to excellence and care.
+              Everything we do is driven by our commitment to excellence and
+              care.
             </p>
           </AnimatedSection>
 
@@ -367,7 +398,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* Timeline */}
       <section className="py-32 relative">
         <div className="container mx-auto px-4">
@@ -380,7 +410,8 @@ export default function AboutPage() {
               Growing Together
             </h2>
             <p className="text-muted-foreground text-xl leading-relaxed">
-              From humble beginnings to becoming a trusted name in home services.
+              From humble beginnings to becoming a trusted name in home
+              services.
             </p>
           </AnimatedSection>
 
@@ -394,7 +425,11 @@ export default function AboutPage() {
                       index % 2 === 1 ? "md:flex-row-reverse" : ""
                     }`}
                   >
-                    <div className={`flex-1 ${index % 2 === 1 ? "md:text-left" : "md:text-right"}`}>
+                    <div
+                      className={`flex-1 ${
+                        index % 2 === 1 ? "md:text-left" : "md:text-right"
+                      }`}
+                    >
                       <div className="bg-card p-8 rounded-3xl border border-border/50 shadow-lg inline-block hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 max-w-md group hover:-translate-y-2">
                         <div className="text-primary font-black text-3xl mb-3 tracking-tight group-hover:scale-110 transition-transform origin-left inline-block">
                           {milestone.year}
@@ -420,7 +455,12 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-32 bg-foreground text-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <Image src="/images/icon-bg-pattern-01.png" alt="Pattern" fill className="object-cover" />
+          <Image
+            src="/images/icon-bg-pattern-01.png"
+            alt="Pattern"
+            fill
+            className="object-cover"
+          />
         </div>
         <div className="container relative z-10 mx-auto px-4">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-20">
@@ -465,7 +505,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* Gallery */}
       <section className="py-32">
         <div className="container mx-auto px-4">
@@ -480,14 +519,14 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
-              "/images/img- (8).png",
-              "/images/img- (9).png",
-              "/images/img- (13).png",
-              "/images/img- (14).png",
-              "/images/img- (16).png",
-              "/images/img- (17).png",
-              "/images/img- (18).png",
-              "/images/img- (19).png",
+              "/images/img- (8).jpg",
+              "/images/img- (9).jpg",
+              "/images/img- (13).jpg",
+              "/images/img- (14).jpg",
+              "/images/img- (16).jpg",
+              "/images/img- (17).jpg",
+              "/images/img- (18).jpg",
+              "/images/img- (19).jpg",
             ].map((img, i) => (
               <AnimatedSection key={i} delay={i * 50}>
                 <div className="relative rounded-2xl md:rounded-3xl overflow-hidden aspect-square group cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2">
@@ -513,11 +552,16 @@ export default function AboutPage() {
       {/* Why Choose Us CTA */}
       <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/icon-bg-pattern-01.png" alt="Pattern" fill className="object-cover" />
+          <Image
+            src="/images/icon-bg-pattern-01.png"
+            alt="Pattern"
+            fill
+            className="object-cover"
+          />
         </div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-        
+
         <div className="container relative z-10 mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -540,7 +584,9 @@ export default function AboutPage() {
                     <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
                       <CheckCircle2 className="w-5 h-5" />
                     </div>
-                    <span className="text-lg font-medium tracking-wide">{item}</span>
+                    <span className="text-lg font-medium tracking-wide">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -554,12 +600,12 @@ export default function AboutPage() {
                 </Button>
               </Link>
             </AnimatedSection>
-            
+
             <AnimatedSection delay={200} className="relative">
               <div className="absolute -inset-4 bg-white/10 rounded-[2.5rem] -rotate-3 blur-xl" />
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl hover:shadow-white/20 transition-shadow duration-500">
                 <Image
-                  src="/images/img- (51).png"
+                  src="/images/img- (31).jpg"
                   alt="Happy team"
                   width={600}
                   height={500}
