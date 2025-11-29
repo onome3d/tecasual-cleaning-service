@@ -29,7 +29,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="TECASUAL Logo"
                 width={150}
                 height={60}
